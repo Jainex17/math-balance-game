@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-[#0A0A0B] to-[#131315] flex items-center justify-center p-4">
-    <div class="max-w-md w-full space-y-8 bg-[#18181B] p-8 rounded-xl shadow-2xl border border-[#27272A]">
+    <div class="w-full max-w-[90%] sm:max-w-md space-y-6 sm:space-y-8 bg-[#18181B] p-4 sm:p-8 rounded-xl shadow-2xl border border-[#27272A]">
       <div v-if="errorMsg" class="bg-red-500 text-white p-4 rounded-lg mb-4 flex justify-between items-center">
         <span>{{ errorMsg }}</span>
         <button @click="errorMsg = ''" class="text-white hover:text-gray-200">
@@ -9,11 +9,11 @@
       </div>
 
       <div class="text-center">
-        <h2 class="text-3xl font-bold text-white mb-2">Welcome Back</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Welcome Back</h2>
         <p class="text-gray-400">Sign in to continue your learning journey</p>
       </div>
 
-      <form @submit.prevent="handleEmailLogin" class="space-y-6 mt-8">
+      <form @submit.prevent="handleEmailLogin" class="space-y-4 sm:space-y-6 mt-6 sm:mt-8">
         <div>
           <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
           <input
@@ -41,7 +41,7 @@
         <div>
           <button
             type="submit"
-            class="w-full bg-[#4F46E5] hover:bg-[#4338CA] text-white font-semibold px-4 py-3 rounded-lg transition-colors duration-300 shadow-lg shadow-indigo-500/20"
+            class="w-full bg-[#4F46E5] hover:bg-[#4338CA] text-white text-sm sm:text-base font-semibold px-4 py-2 sm:py-3 rounded-lg transition-colors duration-300 shadow-lg shadow-indigo-500/20"
           >
             Sign In
           </button>

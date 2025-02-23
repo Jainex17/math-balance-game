@@ -1,6 +1,6 @@
 # Math Balance Game
 
-This is a simple math game that tests your math skills. The game is simple, you have to balance the equation by selecting the correct answer. The game is designed to help you improve your math skills.
+This is a simple math game that tests your math skills. This game teaches addition through visual intuition - imagine a balance scale where students need to find numbers that add up to match a target value. When they're close but not quite right, the scale tilts to show them if their sum is too large or too small!
 
 ## Features
 - User can create an account and login with both google and email/password

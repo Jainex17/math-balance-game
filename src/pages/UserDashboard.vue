@@ -1,13 +1,13 @@
 <template>
   <div class="bg-[#0A0A0B] min-h-screen">
-    <div class="p-6">
-      <div class="mb-8">
-        <h1 class="text-3xl font-bold text-[#E2E2E4] mb-6">
+    <div class="p-4 md:p-6">
+      <div class="mb-6 md:mb-8">
+        <h1 class="text-2xl md:text-3xl font-bold text-[#E2E2E4] mb-4 md:mb-6">
           Welcome back, {{ auth.currentUser?.displayName }}!
         </h1>
       </div>
 
-      <div class="bg-[#18181B] rounded-lg shadow-lg p-6 mb-8 border border-[#27272A]">
+      <div class="bg-[#18181B] rounded-lg shadow-lg p-4 md:p-6 mb-6 md:mb-8 border border-[#27272A]">
         <h2 class="text-xl font-bold text-[#E2E2E4] mb-4">Level Progress</h2>
         <div class="w-full bg-[#27272A] rounded-full h-4">
           <div
@@ -20,18 +20,18 @@
         </div>
       </div>
 
-      <div class="bg-[#18181B] rounded-lg shadow-lg p-6 mb-8 border border-[#27272A]">
-        <h2 class="text-xl font-bold text-gray-100 mb-4">Levels</h2>
+      <div class="bg-[#18181B] rounded-lg shadow-lg p-4 md:p-6 mb-6 md:mb-8 border border-[#27272A]">
+        <h2 class="text-lg md:text-xl font-bold text-gray-100 mb-4">Levels</h2>
 
         <div class="relative max-w-4xl w-full mx-auto">
-          <div class="grid grid-cols-5 gap-6 p-4">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6 p-2 md:p-4">
             <button
               v-for="level in levels"
               :key="level.levelNumber"
               @click="startLevel(level.levelNumber)"
               :disabled="!gameStore.isLevelUnlocked(level.levelNumber)"
               :class="[
-                'aspect-square w-32 relative group transition-all duration-300',
+                'aspect-square w-full max-w-[8rem] relative group transition-all duration-300',
                 !gameStore.isLevelUnlocked(level.levelNumber)
                   ? 'cursor-not-allowed opacity-50'
                   : 'cursor-pointer hover:scale-105 hover:shadow-xl',

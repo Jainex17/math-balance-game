@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-[#0A0A0B] to-[#131315] flex items-center justify-center p-4">
-    <div class="max-w-md w-full space-y-8 bg-[#18181B] p-8 rounded-xl shadow-2xl border border-[#27272A]">
-      <div v-if="errorMsg" class="bg-red-500 text-white p-4 rounded-lg mb-4 flex justify-between items-center">
+    <div class="w-full max-w-md space-y-6 md:space-y-8 bg-[#18181B] p-4 md:p-8 rounded-xl shadow-2xl border border-[#27272A]">
+      <div v-if="errorMsg" class="bg-red-500 text-white p-3 md:p-4 rounded-lg mb-4 flex justify-between items-center text-sm md:text-base">
         <span>{{ errorMsg }}</span>
         <button @click="errorMsg = ''" class="text-white hover:text-gray-200">
           ×
@@ -9,51 +9,51 @@
       </div>
 
       <div class="text-center">
-        <h2 class="text-3xl font-bold text-white mb-2">Create Account</h2>
-        <p class="text-gray-400">Join us to start your learning journey</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Create Account</h2>
+        <p class="text-sm md:text-base text-gray-400">Join us to start your learning journey</p>
       </div>
 
-      <form @submit.prevent="handleEmailSignUp" class="space-y-6 mt-8">
+      <form @submit.prevent="handleEmailSignUp" class="space-y-4 md:space-y-6 mt-6 md:mt-8">
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+          <label for="name" class="block text-xs md:text-sm font-medium text-gray-300 mb-1 md:mb-2">Full Name</label>
           <input
             v-model="name"
             id="name"
             type="text"
             required
-            class="w-full px-4 py-3 bg-[#27272A] border border-[#3F3F46] rounded-lg focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent text-[#E2E2E4] placeholder-[#71717A] outline-none transition-colors duration-200"
+            class="w-full px-3 md:px-4 py-2 md:py-3 bg-[#27272A] border border-[#3F3F46] rounded-lg focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent text-[#E2E2E4] placeholder-[#71717A] outline-none transition-colors duration-200 text-sm md:text-base"
             placeholder="Enter your full name"
           />
         </div>
 
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+          <label for="email" class="block text-xs md:text-sm font-medium text-gray-300 mb-1 md:mb-2">Email</label>
           <input
             v-model="email"
             id="email"
             type="email"
             required
-            class="w-full px-4 py-3 bg-[#27272A] border border-[#3F3F46] rounded-lg focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent text-[#E2E2E4] placeholder-[#71717A] outline-none transition-colors duration-200"
+            class="w-full px-3 md:px-4 py-2 md:py-3 bg-[#27272A] border border-[#3F3F46] rounded-lg focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent text-[#E2E2E4] placeholder-[#71717A] outline-none transition-colors duration-200 text-sm md:text-base"
             placeholder="Enter your email"
           />
         </div>
 
         <div>
-          <label for="password" class="block text-sm font-medium text-gray-300 mb-2">Password</label>
+          <label for="password" class="block text-xs md:text-sm font-medium text-gray-300 mb-1 md:mb-2">Password</label>
           <input
             v-model="password"
             id="password"
             type="password"
             required
-            class="w-full px-4 py-3 bg-[#27272A] border border-[#3F3F46] rounded-lg focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent text-[#E2E2E4] placeholder-[#71717A] outline-none transition-colors duration-200"
+            class="w-full px-3 md:px-4 py-2 md:py-3 bg-[#27272A] border border-[#3F3F46] rounded-lg focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent text-[#E2E2E4] placeholder-[#71717A] outline-none transition-colors duration-200 text-sm md:text-base"
             placeholder="Create a password"
           />
         </div>
 
-        <div>
+        <div class="pt-2">
           <button
             type="submit"
-            class="w-full bg-[#4F46E5] hover:bg-[#4338CA] text-white font-semibold px-4 py-3 rounded-lg transition-colors duration-300 shadow-lg shadow-indigo-500/20"
+            class="w-full bg-[#4F46E5] hover:bg-[#4338CA] text-white font-semibold px-4 py-2.5 md:py-3 rounded-lg transition-colors duration-300 shadow-lg shadow-indigo-500/20 text-sm md:text-base"
           >
             Sign Up
           </button>
@@ -94,7 +94,7 @@
         Sign up with Google
       </button>
 
-      <p class="text-center text-gray-400 mt-4">
+      <p class="text-center text-gray-400 mt-4 text-sm md:text-base">
         Already have an account?
         <router-link to="/login" class="text-blue-400 hover:text-blue-500 font-medium">Sign in</router-link>
       </p>
