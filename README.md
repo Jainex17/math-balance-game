@@ -6,6 +6,10 @@ This is a simple math game that tests your math skills. This game teaches additi
 - User can create an account and login with both google and email/password
 - All data is stored in Firebase
 - There is 5 levels that users can play
+- Responsive design
+- Protected routes
+- Session management
+- Interactive balance scale visualization
 
 ## Technologies
 - Vue.JS (Frontend)
@@ -30,7 +34,6 @@ VITE_FIREBASE_APP_ID=YOUR_FIREBASE
 4. Run `npm run dev` to start the development server
 
 ## To Do
-- Responsive design
 - Admin panel
 - Leaderboard
 - Add multiplication and division levels
