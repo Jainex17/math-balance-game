@@ -37,7 +37,7 @@ const authInitialization = new Promise<void>((resolve) => {
   });
 });
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach(async (to, _from, next) => {
   if (!authInitialized) {
     await authInitialization;
   }
